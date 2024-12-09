@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model Service {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  price       Float
+  min_duration    Int       // Duração em minutos
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  appointments Appointment[]
+}
+
+model Appointment {
+  id          Int       @id @default(autoincrement())
+  fullName    String    // Nome completo do cliente
+  cpf         String    // CPF do cliente
+  phone       String?   // Telefone do cliente
+  email       String?   // Email do cliente
+  serviceId   Int
+  date        DateTime
+  status      Status    @default(PENDING)
+  notes       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  service     Service   @relation(fields: [serviceId], references: [id])
+}
+
+enum Status {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
