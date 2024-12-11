@@ -1,6 +1,10 @@
 # 📅 TuxAgenda - Sistema de Gerenciamento de Agenda 🐧
 
+
+
 [![GitHub issues](https://img.shields.io/github/issues/Lusqinha/TuxAgenda)]()  [![GitHub forks](https://img.shields.io/github/forks/Lusqinha/TuxAgenda)]()  [![GitHub stars](https://img.shields.io/github/stars/Lusqinha/TuxAgenda)]()  [![GitHub license](https://img.shields.io/github/license/Lusqinha/TuxAgenda)]()
+
+![](/docs/TuxAgenda-header.png)
 
 ## Descrição
 
