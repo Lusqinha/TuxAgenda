@@ -1,4 +1,4 @@
-# 📅 TuxAgenda - Sistema de Gerenciamento de Agenda 🐧
+# 📅 TuxAgenda - Sistema de Agendamento 🐧
 
 
 
